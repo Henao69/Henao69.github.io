@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="main.css">
+
+
+    <title>Calculadora de calorías</title>
+  </head>
+  <body>
+    <main class="main-content">
+      <section class="container">
+        <div class="row py-4">
+          <div class="card col-lg-7">
+            <h1 class="h2 text-center">Calculadora de Calorías</h1>
+            <section class="row mt-0 contenedor">
+              <form id="formulario-calculadora">
+                <div>
+                  <div class="bm-3 mt-0">
+                    <label for="edad" class="form-label h4">Nombre y apellido</label>
+                  <div class="mt-16 input-group">
+                    <input type="text" id="name" class="form-control user-name" placeholder="Nombre">
+                    <input type="text" id="last-name" class="form-control user-name" placeholder="Apellido">
+                  </div>
+                </div>
+    
+                <div class="col-md-6 mt-0 contenedor">
+                  <label for="actividad" class="form-label h4">Tipo de documento</label>
+                  <select id="tipo-documento" class="form-select" required>
+                    <option></option>
+                    <option >TI - Tarjeta de identidad</option>
+                    <option >CC - Cedula de ciudadania</option>
+                    <option >CE - Cedula de extranjería</option>
+                    <option >Pasaporte</option>
+                  </select>
+                </div>
+    
+                <div class="col-md-6 mt-0 edad contenedor">
+                  <label for="documento" class="form-label h4">Numero de documento</label>
+                  <div class="mt-16">
+                    <input type="number" id="documento" class="form-control">
+                  </div>
+                </div>
+    
+                <div class="col-md-6 mt-0 edad contenedor">
+                  <label for="edad" class="form-label h4">¿Cuántos años tienes?</label>
+                  <div class="mt-16">
+                    <input type="number" id="edad" class="form-control" min="1" max="80" placeholder="21" maxlength="3" inputmode="tel">
+                    <label class="h6">años</label>
+                  </div>
+                </div>
+    
+                <div class="col-md-6 mt-0 contenedor">
+                  <label for="peso" class="form-label h4">Peso</label>
+                  <input type="number" id="peso" class="form-control" placeholder="Digíte su peso en kilogramos">
+                </div>
+    
+                <div class="col-md-6 mt-0 contenedor">
+                  <label for="altura" class="form-label h4">Altura</label>
+                  <input type="number" id="altura" class="form-control" placeholder="Digíte su altura en centímetros">
+                </div>
+                
+                <section class="col-md-6 mt-0 contenedor">
+                  <span class="h4 p-0">Sexo</span>
+                  <div class="form-check">
+                    <input class="form-check-input" value="F" type="radio" name="genero" id="femenino" checked>
+                    <label class="form-check-label" for="femenino">
+                      Femenino
+                    </label>
+                  </div>
+    
+                  <div class="form-check">
+                    <input class="form-check-input" value="M" type="radio" name="genero" id="masculino">
+                    <label class="form-check-label" for="masculino">
+                      Masculino
+                    </label>
+                  </div>
+                </section>
+    
+                <div class="bm-3 contenedor">
+                  <label for="actividad" class="form-label h4">Actividad física</label>
+                  <select id="actividad" class="form-select">
+                    <option></option>
+                    <option value="1.2">Poco o ningún ejercicio</option>
+                    <option value="1.375">Ejercicio ligero (1-3 días a la semana)</option>
+                    <option value="1.55">Ejercicio moderado (3-5 días a la semana)</option>
+                    <option value="1.725">Ejercicio fuerte (6-7 días a la semana)</option>
+                    <option value="1.9">Ejercicio muy fuerte (dos veces al día, entrenamientos muy duros)</option>
+                  </select>
+                </div>
+              </form>
+                <hr>
+                <div class="d-flex justify-content-center my-3">
+                  <button type="submit" class="btn btn-danger w-75" style="font-size: 1.5rem">Calcular</button>
+                </div>
+              </section>
+          </div>
+          <article class="card bm-3" id="resultado">
+          </article>
+          <button type="button" class="btn btn-primary" id="retorno" style="display: none;">Calcular de nuevo</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
